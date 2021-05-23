@@ -1,11 +1,11 @@
-from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor
 import concurrent.futures
 import itertools
-import time
-import pickle
-import numpy as np
 import json
+import pickle
+from concurrent.futures import ThreadPoolExecutor
+
+import numpy as np
+from tqdm import tqdm
 
 with open('dict1.txt', 'rb') as f:
     data = pickle.load(f)
