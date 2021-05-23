@@ -2,5 +2,5 @@ module.exports = {
   transpileDependencies: [
     'vuetify'
   ],
-  publicPath: process.env.NODE_ENV === 'production' ? '/vk_graph/' : '/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/dist/' : '/'
 }
