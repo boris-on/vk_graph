@@ -12,7 +12,7 @@
 	export default {
 		name: "BasicGraph",
 		mounted() {
-			const jsonData = require("../../../data/result2.json");
+			const jsonData = require("../../../data/result4.json");
 			const graph = ForceGraph3D({ controlType: "orbit" })(document.getElementById("3d-graph"));
 
 			let temp = {
@@ -21,7 +21,7 @@
 			};
 
 			for (let link of jsonData["links"]) {
-				if (link.value > 0.23) {
+				if (link.value_min > 0.25) {
 					temp["links"].push(link);
 				}
 			}
@@ -38,10 +38,12 @@
 				.nodeLabel("id")
 				.graphData(temp)
 				.linkOpacity(0.5)
+				.nodeAutoColorBy('group')
 				.nodeColor((node) => (highlightNodes.has(node) ? (node === hoverNode ? "rgb(255,0,0,1)" : "rgba(255,160,0,0.8)") : "rgba(0,255,255,0.6)"))
 				.linkWidth((link) => (highlightLinks.has(link) ? 4 : 0.75))
 				.linkDirectionalParticles((link) => (highlightLinks.has(link) ? 4 : 0))
 				.linkDirectionalParticleWidth(4)
+				.linkAutoColorBy('group')
 				// .onNodeHover((node) => {
 				// 	if ((!node && !highlightNodes.size) || (node && hoverNode === node)) return;
 
@@ -80,12 +82,12 @@
 				// 	sprite.scale.set(16, 16);
 				// 	return sprite;
 				// })
-
+				
 				.nodeThreeObject((node) => {
 					const sprite = new SpriteText(node.name);
 					sprite.material.depthWrite = true; // ma	ke sprite background transparent
 					sprite.color = "White";
-					sprite.textHeight = 6;
+					sprite.textHeight = 10;
 					return sprite;
 				})
 
@@ -111,7 +113,7 @@
 				})
 
 				.d3Force("link")
-				.distance((link) => Math.abs(link.value / 0.5 - 1) * 100);
+				.distance((link) => Math.abs(link.value_min / 0.5 - 1) * 100);
 
 			// function updateHighlight() {
 			// 	// trigger update of highlighted objects in scene

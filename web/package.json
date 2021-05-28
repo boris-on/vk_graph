@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-jsonp-pro": "^1.1.8",
     "core-js": "^3.6.5",
     "react-force-graph-3d": "^1.21.1",
     "three": "^0.127.0",
