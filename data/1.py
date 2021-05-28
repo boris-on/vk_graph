@@ -16,6 +16,7 @@ for el in list(data.keys())[1:]:
 
 
 data = temp
+print(data)
 del temp
 
 d = {
