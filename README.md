@@ -17,6 +17,6 @@
 3. Запустить dev-сервер
   ```bash
   npm run serve
-   
+  ```
 Honorable mentions:
 idf3da
