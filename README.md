@@ -1,6 +1,6 @@
-Актуальная версия - https://github.com/boris-on/vk_publics_graph_2d
+:negative_squared_cross_mark: Граф устарел. Актуальная версия - https://github.com/boris-on/vk_publics_graph_2d
 
-## VK Audience Graph
+# VK Audience Graph
 
 Граф, визуализирующий схожесть аудитории крупнейших пабликов ВК
 
