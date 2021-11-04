@@ -1,3 +1,5 @@
+Актуальная версия - https://github.com/boris-on/vk_publics_graph_2d
+
 ## VK Audience Graph
 
 Граф, визуализирующий схожесть аудитории крупнейших пабликов ВК
